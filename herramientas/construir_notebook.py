@@ -22,6 +22,8 @@ def construir():
             celdas.append(nbformat.v4.new_markdown_cell(md))
         else:
             celdas.append(nbformat.v4.new_code_cell(cuerpo))
+    for i, celda in enumerate(celdas):
+        celda['id'] = f'celda-{i:02d}'          # IDs estables: diffs limpios al regenerar
     nb = nbformat.v4.new_notebook(cells=celdas)
     nb.metadata = {'colab': {'provenance': [], 'toc_visible': True},
                    'kernelspec': {'name': 'python3', 'display_name': 'Python 3'},
