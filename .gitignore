@@ -1,0 +1,5 @@
+nfl_apuestas/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+mis_cuotas.csv
